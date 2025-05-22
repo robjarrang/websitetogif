@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website to GIF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Website to GIF</h1>
+        <form id="gifForm">
+            <div class="form-group">
+                <label for="url">Web URL</label>
+                <input type="url" class="form-control" id="url" placeholder="Enter web URL" required>
+            </div>
+            <div class="form-group">
+                <label for="width">Width (px)</label>
+                <input type="number" class="form-control" id="width" placeholder="Enter width in pixels" required>
+            </div>
+            <div class="form-group">
+                <label for="frameRate">Frame Rate (fps)</label>
+                <input type="number" class="form-control" id="frameRate" placeholder="Enter frame rate" required>
+            </div>
+            <div class="form-group">
+                <label for="length">Length (seconds)</label>
+                <input type="number" class="form-control" id="length" placeholder="Enter length in seconds" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Convert</button>
+        </form>
+        <div id="loading" class="text-center mt-3" style="display: none;">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div id="result" class="text-center mt-3" style="display: none;">
+            <a id="downloadLink" href="#" class="btn btn-success">Download GIF</a>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+</html>

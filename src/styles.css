@@ -1,0 +1,23 @@
+/* Custom styles for loading animation and UI elements */
+
+#loading {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+}
+
+#result {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#downloadLink {
+    margin-top: 20px;
+}
