@@ -25,6 +25,7 @@ document.getElementById('gifForm').addEventListener('submit', async (event) => {
         for (let i = 0; i < totalFrames; i++) {
             const screenshot = await page.screenshot();
             screenshots.push(screenshot);
+            await page.waitForTimeout(1000 / frameRate);
         }
 
         await browser.close();
