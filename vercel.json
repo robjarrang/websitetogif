@@ -6,14 +6,14 @@
       "use": "@vercel/static"
     },
     {
-      "src": "src/index.js",
+      "src": "src/api/generate-gif.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/generate-gif",
-      "dest": "/src/index.js"
+      "dest": "/src/api/generate-gif.js"
     },
     {
       "src": "/(.*)",

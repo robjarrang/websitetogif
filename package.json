@@ -1,0 +1,9 @@
+{
+  "name": "websitetogif",
+  "version": "1.0.0",
+  "main": "src/api/generate-gif.js",
+  "dependencies": {
+    "puppeteer": "^19.11.1",
+    "gifshot": "^0.3.2"
+  }
+}
