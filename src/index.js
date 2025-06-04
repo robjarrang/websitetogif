@@ -23,8 +23,8 @@ document.getElementById('gifForm').addEventListener('submit', async (event) => {
         const screenshots = [];
         const totalFrames = frameRate * length;
         for (let i = 0; i < totalFrames; i++) {
-            const screenshot = await page.screenshot();
-            screenshots.push(screenshot);
+            const screenshot = await page.screenshot({ encoding: 'base64' });
+            screenshots.push(`data:image/png;base64,${screenshot}`);
         }
 
         await browser.close();
