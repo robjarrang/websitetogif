@@ -43,10 +43,10 @@ This project allows users to input any web URL and convert it into a downloadabl
    ```
    npm run dev
    ```
-5. Optionally run the API script directly:
-   ```
-   npm start
-   ```
+5. Alternatively start the Express server:
+    ```
+    npm start
+    ```
 6. Open the application in your browser:
    ```
    http://localhost:3000
