@@ -70,7 +70,7 @@ This project allows users to input any web URL and convert it into a downloadabl
 ## Dependencies
 
 - Puppeteer
-- gifshot
+- gifencoder
 - Bootstrap
 
 ## Technologies Used
