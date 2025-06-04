@@ -1,9 +1,19 @@
 {
   "name": "websitetogif",
   "version": "1.0.0",
+  "description": "This project allows users to input any web URL and convert it into a downloadable GIF. Users can set the dimensions for the width of the GIF, and the height will automatically adjust to incorporate the full height of the supplied web page. Users can also set the frame rate and length in time of the resulting GIF. The project uses Bootstrap for UI elements and includes a loading animation.",
   "main": "src/api/generate-gif.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "vercel dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
-    "puppeteer": "^19.11.1",
+    "puppeteer": "^21.3.8",
     "gifshot": "^0.3.2"
   }
 }
