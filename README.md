@@ -39,11 +39,15 @@ This project allows users to input any web URL and convert it into a downloadabl
    ```
    npm install
    ```
-4. Run the development server:
+4. Run the development server (requires the Vercel CLI):
    ```
    npm run dev
    ```
-5. Open the application in your browser:
+5. Optionally run the API script directly:
+   ```
+   npm start
+   ```
+6. Open the application in your browser:
    ```
    http://localhost:3000
    ```
