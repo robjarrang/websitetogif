@@ -8,9 +8,36 @@ module.exports = async (req, res) => {
   const frameRate = parseInt(req.query.frameRate || req.body?.frameRate, 10);
   const length = parseInt(req.query.length || req.body?.length, 10);
 
+  const MAX_WIDTH = 2000;       // Prevent extremely large GIFs
+  const MAX_FRAME_RATE = 60;    // Reasonable maximum frames per second
+  const MAX_LENGTH = 60;        // Limit GIF length in seconds
+  const isSafePositiveInt = (n) => Number.isSafeInteger(n) && n > 0;
+
   // Validate required parameters
-  if (!url || !width || !frameRate || !length) {
-    res.status(400).json({ error: 'Missing required parameters' });
+  if (!url) {
+    res.status(400).json({ error: 'Missing required parameter: url' });
+    return;
+  }
+  if (!isSafePositiveInt(width) || width > MAX_WIDTH) {
+    res
+      .status(400)
+      .json({ error: `Width must be a positive integer up to ${MAX_WIDTH}px` });
+    return;
+  }
+  if (!isSafePositiveInt(frameRate) || frameRate > MAX_FRAME_RATE) {
+    res
+      .status(400)
+      .json({
+        error: `Frame rate must be a positive integer up to ${MAX_FRAME_RATE} fps`,
+      });
+    return;
+  }
+  if (!isSafePositiveInt(length) || length > MAX_LENGTH) {
+    res
+      .status(400)
+      .json({
+        error: `Length must be a positive integer up to ${MAX_LENGTH} seconds`,
+      });
     return;
   }
 
